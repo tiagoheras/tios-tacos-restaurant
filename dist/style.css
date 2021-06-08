@@ -1,0 +1,174 @@
+h1 {
+    margin: 0
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Poppins';
+    background-image: url();
+}
+
+p {
+    font-size: 20px;
+}
+
+@font-face {
+        font-family: "el-rio-lobo";
+        src: url("ELRIOTT2.TTF");
+    }
+    
+#content {
+   text-align: center;
+   color: white;
+   background-color: #212121;
+   /* background-image: url("https://www.pequerecetas.com/wp-content/uploads/2020/10/tacos-mexicanos.jpg"); */
+   flex-grow: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 12.5%;
+    height: 100vh;
+    text-align: center;
+    /* background-color: #49843C; */
+    background-color: #006847;
+    position: relative;
+    overflow-y: hidden;
+}
+
+header::before {
+    content: '';
+    background-image: url("./images/mexicanfoodpattern.jpg");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+}
+
+header h1 {
+    color: white;
+    margin: 150px 0 70px 0;
+    font-family: 'el-rio-lobo';
+    font-size: 90px;
+    font-weight: normal;
+    line-height: 60px;
+    z-index: 1;
+}
+
+#tabs-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tab {
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #005238;
+    margin-bottom: 25px;
+    transition: all 0.2s ease-out;
+}
+
+.tab:hover {
+    background-color: #CF0921;
+}
+
+.selected {
+    background-color: #CF0921;
+}
+
+ #home-header {
+    height: 230px;
+    position: relative;
+    background: url("https://media.istockphoto.com/photos/mexican-food-background-guacamole-salsa-cheesy-sauces-with-on-black-picture-id1176847229?k=6&m=1176847229&s=170667a&w=0&h=lUOjKh60IzpqxMYMQ0LGRccN7Q4TFJVuOAFUBm2vryg=") no-repeat center ;
+    background-size: cover;
+    /* background-color: #00ccff; */
+    transform: skewY(-3deg);
+    transform-origin: top left;
+    flex-grow: 1;
+}
+
+#home-header::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+#taco-img {
+
+    z-index: 1;
+    position: absolute;
+    top: -20%;
+    right: -25%;
+    transition: all linear;
+}
+
+#taco-img:hover {
+    right: 10px;
+    top: 10px;
+    transition: all ease-out .5s;
+}
+
+#taco-img-container {
+    margin: auto;
+    height: 470px;
+    width: 580px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 0 40% 0 0 ;
+    /* background-color: blue; */
+    z-index: 0;
+    overflow: hidden;
+    transition: all linear .8s;
+}
+
+
+
+#taco-img-container::before {
+    content: '';
+    height: 80%;
+    width: 80%;
+    background: url("https://media.istockphoto.com/photos/background-of-mexican-nachos-chips-picture-id1202143909?k=6&m=1202143909&s=170667a&w=0&h=btnaoG6a404XlecXzVSImMGCwmU544Ov3S7JsYTZGKs=");
+    filter: brightness(.4);
+    border-radius: 50%;
+    position: absolute;
+    right: 0%;
+    z-index: 0;
+    transition: all ease-in 1s;
+}
+
+#taco-img-container::after {
+    content: '';
+    height: 40%;
+    width: 40%;
+    position: absolute;
+    background-color: transparent;
+    top: 40%; right: 40%; transform: translate(50%, -50%);
+    z-index: 2;
+    border-radius: 50%;
+    border: solid 385px #212121;
+    transition: all .5s linear, border-radius ease;
+    pointer-events: none;
+}
+
+#taco-img-container:hover::after {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+    transition: all .5s ease, border-radius ease 2s;
+}
+
+
