@@ -62,7 +62,7 @@ export default function loadHomepage() {
 
     const tacoImg = document.createElement('img');
     tacoImg.id = "taco-img";
-    tacoImg.src = "https://www.pngfind.com/pngs/b/263-2631637_taco-clipart-png.png";
+    tacoImg.src = "./images/taco.png";
     tacoImg.style.height = "270px"
 
     tacoImgContainer.appendChild(tacoImg);
